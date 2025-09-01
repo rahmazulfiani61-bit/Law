@@ -12,7 +12,7 @@ import os
 # [secrets]
 # gemini_api_key = "AIzaSy..."
 try:
-    API_KEY = st.secrets["gemini_api_key"]
+    API_KEY = st.secrets["AIzaSyA9GBFOQVHR3yMYNQMDnuRn9tw6Jjk5uGU"]
 except KeyError:
     st.error("API Key Gemini tidak ditemukan. Harap pastikan Anda telah menempatkan 'gemini_api_key' di file `.streamlit/secrets.toml` Anda.")
     st.stop()
@@ -83,3 +83,4 @@ if prompt := st.chat_input("Apa kasus yang ingin Anda konsultasikan?"):
         except Exception as e:
             st.error(f"Maaf, terjadi kesalahan saat berkomunikasi dengan Gemini: {e}")
             st.warning("Penyebab: Masalah koneksi, API Key tidak valid, atau batas kuota terlampaui.")
+
